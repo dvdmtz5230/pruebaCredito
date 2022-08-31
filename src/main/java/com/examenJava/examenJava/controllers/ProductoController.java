@@ -29,7 +29,7 @@ public class ProductoController {
 
     @GetMapping(path= "/{sku}")
     public Optional<ProductoModel> getProductoBySku(@PathVariable("sku")String sku){
-        return this.productoService.getBySku("00000SKN1");
+        return this.productoService.getBySku(sku);
     }
     @GetMapping("/producByName")
     public ArrayList<ProductoModel> getProductoName(@RequestParam("name")String nombre){
